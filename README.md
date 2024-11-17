@@ -1,2 +1,2 @@
 # airflow-practices
-Learning Apache Airflow.
+A repository to comprehend Apache Airflow.
