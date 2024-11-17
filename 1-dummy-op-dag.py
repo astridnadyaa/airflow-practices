@@ -16,12 +16,13 @@ default_args = {'owner': 'kribogoreng',
     schedule_interval='@daily',
     catchup=False
 )
-
 def simple_dag():
-    start = DummyOperator(task_id='start'),
+    ### --- Define tasks ---
+    start = DummyOperator(task_id='start')
     end = DummyOperator(task_id='end')
 
-    ### -- Task Workflow ---
+    ### --- Define task dependencies ---
     start >> end
-
+  
+### --- Instantiate the DAG ---
 dag = simple_dag()
